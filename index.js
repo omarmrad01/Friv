@@ -21,23 +21,15 @@ var computerRound=function(){
     var choice=arr[Math.floor(Math.random()*3)]
     
     that.computerChoice=choice.choice
-    // console.log(that.computerChoice,choice.choice)
+  
     $('#computer').attr('src',choice.url)
 }
 var playGame=function (choice){
     var that=this 
-    // var player=$('.options')
-    // var computer=$(that.computerRound())
-    // var playerScore=$(".counterP")
-    // var computerScore=$(".counterC")
+   
     var player=$('.counterP') 
     var computer=$('.counterC') 
-
-
-    // console.log(this);
-
-
-    // console.log("computerscore",that.computerScore)
+  
       if(choice=== that.computerChoice){
         alert("draw")
         
@@ -46,50 +38,50 @@ var playGame=function (choice){
     else if(choice==='rock'&&that.computerChoice==='paper'){
        that.computerScore=that.computerScore+1
        computer.html(that.computerScore)
-     alert(that.computerScore)
+     alert('computer won'+' '+that.computerScore)
     }else if (choice==='paper'&&that.computerChoice==='rock'){
         that.playerScore= that.playerScore+1
         player.html(that.playerScore)
-     alert( that.playerScore)
+     alert('player won'+' '+ that.playerScore)
     } else if(choice==='rock'&&that.computerChoice==='scissor'){
         that.playerScore= that.playerScore+1
         player.html(that.playerScore)
-        alert( that.playerScore)
+        alert('player won'+' '+ that.playerScore)
     
     }
     else if(that.computerChoice==='rock'&&choice==='scissor'){
         that.computerScore=that.computerScore+1
        computer.html(that.computerScore)
 
-        alert( that.computerScore)
+        alert('computer won'+' '+ that.computerScore)
     
     }
     else if(that.computerChoice==='scissor'&&choice==='paper'){
         that.computerScore=that.computerScore+1
        computer.html(that.computerScore)
 
-        alert( that.computerScore)
+        alert('computer won'+' '+ that.computerScore)
     
     }
     else if(that.computerChoice==='paper'&&choice==='scissor'){
         that.playerScore= that.playerScore+1
        player.html(that.playerScore)
 
-        alert(  that.playerScore)
+        alert('player won'+' '+  that.playerScore)
     
     }else{
         alert("somthing wrong")
     }
     if(that.playerScore===5||that.computerScore===5){
         if(that.playerScore>that.computerScore){
-            alert("player win")
-            that.computerScore=0
-           that.playerScore=0 
+            alert("congratulation player win"+' '+that.playerScore,that.computerScore)
+       
+      
         }
         if(that.playerScore<that.computerScore){
-            alert("computer win")
-            that.computerScore=0
-        that.playerScore=0
+            alert("computer win! try again "+' '+that.computerScore,that.playerScore)
+      
+      
         }
         
     }
@@ -121,19 +113,19 @@ $("#scissor").on('click', function(){
       $('#player').attr('src',"./photo/paper.png")
    })
 
+// $(document).ready(function(){
+//     $("again").click(function(){
+//       return "0";
+//     });
+//     $("again").click(function(event){
+//       $("counterC").html(event.result);
+//     });  
+//   });
 
-// $("#rock,#paper,#scisor").on('click',function(){
-//     $('#rock').text('rock')
+
+// $("#again").on('click',function(){
+    
+//    $('#again').attr(that.computerScore=0)
+//    $('#again').attr(that.playerScore=0)
+
 // })
-
-// $("#scissor").on('click', function(){
-//   $('#player').attr('src',"./photo/scissor.png")
-// })
-
-//  $("#rock").on('click',function(){
-//     $('#player').attr('src',"./photo/rock.png")
-//  })
-
-//  $("#paper").on('click',function(){
-//     $('#player').attr('src',"./photo/paper.png")
-//  })

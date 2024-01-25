@@ -1,4 +1,4 @@
-/* designe titre */
+
 #btn{
     
     height: 7rem;
@@ -18,7 +18,7 @@
     width: 100%;
 }
 
-/* designe player computer and  number  */
+
 .score{
     display: flex;
   
@@ -32,7 +32,7 @@
     font-size: 1.5rem;
     margin-top: 1rem;
 }
-/* designe choose */
+
 .title{
     position: absolute;
     top: 0;
@@ -42,7 +42,7 @@
     left: 45%;
 }
 
-/* designe button */
+
 .options{
     display: flex;
      justify-content: center;
@@ -84,4 +84,24 @@
     height: 25%;
     width: 100%;
 }
+#again{
+    position: absolute;
+    left: 7%;
+    width: 15rem;
+    height: 5rem;
+    
+}
+.photo #player #computer{
+    /* transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH"; */
+}
+
 
